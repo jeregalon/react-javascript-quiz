@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Footer } from "./Footer";
 import { useQuestionStore } from "./store/questions";
 import type { Question as QuestionType } from "./types";
 
@@ -92,6 +93,7 @@ export const Game = () => {
 				</IconButton>
 			</Stack>
 			<Question info={questionInfo} />
+			<Footer />
 		</>
 	);
 };
