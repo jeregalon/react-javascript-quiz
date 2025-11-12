@@ -26,6 +26,9 @@ importers:
       '@mui/material':
         specifier: ^7.3.5
         version: 7.3.5(@emotion/react@11.14.0(@types/react@19.2.3)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.3)(react@19.2.0))(@types/react@19.2.3)(react@19.2.0))(@types/react@19.2.3)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      canvas-confetti:
+        specifier: ^1.9.4
+        version: 1.9.4
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -784,6 +787,9 @@ packages:
 
   caniuse-lite@1.0.30001754:
     resolution: {integrity: sha512-x6OeBXueoAceOmotzx3PO4Zpt4rzpeIFsSr6AAePTZxSkXiYDUmpypEl7e2+8NCd9bD7bXjqyef8CJYPC1jfxg==}
+
+  canvas-confetti@1.9.4:
+    resolution: {integrity: sha512-yxQbJkAVrFXWNbTUjPqjF7G+g6pDotOUHGbkZq2NELZUMDpiJ85rIEazVb8GTaAptNW2miJAXbs1BtioA251Pw==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -2270,6 +2276,8 @@ snapshots:
   callsites@3.1.0: {}
 
   caniuse-lite@1.0.30001754: {}
+
+  canvas-confetti@1.9.4: {}
 
   chalk@4.1.2:
     dependencies:
