@@ -27,7 +27,7 @@ export const useQuestionStore = create<State>()(
 						const questions = json
 							.sort(() => Math.random() - 0.5)
 							.slice(0, limit);
-						set({ questions });
+						set({ questions }, false, "FETCH_QUESTIONS");
 					},
 					selectAnswer: (questionId: number, answerIndex: number) => {
 						const { questions } = get();
@@ -44,24 +44,28 @@ export const useQuestionStore = create<State>()(
 							isCorrectUserAnswer,
 							userSelectedAnswer: answerIndex,
 						};
-						set({ questions: newQuestions });
+						set({ questions: newQuestions }, false, "SELECT_ANSWER");
 					},
 					goNextQuestion: () => {
 						const { currentQuestion, questions } = get();
 						const nextQuestion = currentQuestion + 1;
 						if (nextQuestion < questions.length) {
-							set({ currentQuestion: nextQuestion });
+							set({ currentQuestion: nextQuestion }, false, "GO_NEXT_QUESTION");
 						}
 					},
 					goPreviousQuestion: () => {
 						const { currentQuestion } = get();
 						const previousQuestion = currentQuestion - 1;
 						if (previousQuestion >= 0) {
-							set({ currentQuestion: previousQuestion });
+							set(
+								{ currentQuestion: previousQuestion },
+								false,
+								"GO_PREVIOUS_QUESTION",
+							);
 						}
 					},
 					reset: () => {
-						set({ currentQuestion: 0, questions: [] });
+						set({ currentQuestion: 0, questions: [] }, false, "RESET");
 					},
 				};
 			},
